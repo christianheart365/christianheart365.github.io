@@ -1,0 +1,661 @@
+/*
+*Css beautify used first, then,
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
+     --white: #FFFFFF;
+     --almond: #FFE6CF;
+     --peach-yellow: #EFD28D;
+     --red: #F70809;
+     --dark-red: #8B0000;
+     --black: #000000;
+}
+/* Reset default padding and margin */
+ * {
+     margin: 0;
+     padding: 0;
+     -webkit-box-sizing: border-box;
+             box-sizing: border-box;
+}
+/* Body styling */
+ body {
+     font-family: 'Roboto', 'Open Sans', 'Poppins', 'Liberation Sans', 'Liberation Serif', 'DejaVu Sans', Arial, sans-serif;
+    /* Primary Font (Roboto) with fallback */
+     line-height: 1.6;
+     background-color: var(--black);
+     color: var(--black);
+     padding: 0;
+     margin: 0;
+     font-size: 1rem;
+     font-weight: 420;
+}
+ .small-superscript {
+     font-size: 0.7rem;
+     vertical-align: super;
+     margin-left: 0.2rem;
+}
+ .boldSpan {
+     font-weight: 800;
+     font-size: 1rem;
+}
+ .italicSpan {
+     font-style: italic;
+     font-weight: 410;
+     color: var(--dark-red);
+}
+ h2 {
+     margin-bottom: 1rem;
+}
+ .underlineH4 {
+     display: inline-block;
+     margin-bottom: 1rem;
+     border-bottom: 1px solid var(--black);
+     padding-bottom: 0.5rem;
+    /* Adjust the padding as needed */
+}
+ #underline-highlight {
+    text-decoration: underline;
+     text-underline-offset: 0.4rem;
+}
+ ul {
+     margin: 1rem 4rem 1rem 12rem;
+     line-height: 2;
+}
+ li {
+     margin: 0.75rem auto;
+}
+
+/* ------------------------------------------------------ */
+/* ---------- IMAGE REPLACED WITH LARGE - A - TAG - LOMK ------ */
+.largeATAGb {
+    font-size: 2rem;
+    padding: 2rem; /* Increase padding to create thickness */
+    border: 0.5rem solid var(--black); /* Thicker border */
+    border-radius: 1rem; /* Smooth corner radius for better appearance */
+    background-color: var(--peach-yellow);
+    color: var(--dark-red);
+    display: inline-block; /* Ensures the box wraps the text neatly */
+    text-align: center; /* Centers the text horizontally */
+    line-height: 2.5rem; /* Adjusts spacing between lines */
+    width: 100%; /* Makes the box wide enough to look tall */
+    box-sizing: border-box; /* Includes padding and border in width/height calculations */
+}
+.largeATAGb span {
+    display: block; /* Stacks text segments vertically */
+}
+
+/* ------------------------------------------------------ */
+
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* Container */
+ .container {
+     position: relative;
+     max-width: 80rem;
+    /* Use rem units for better scaling */
+     margin: 0 auto;
+     padding: 2rem 4rem;
+     background-color: var(--black);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     */
+}
+/* Header styles */
+ header {
+     text-align: center;
+     padding: 2rem 0;
+     background-color: var(--black);
+     color: var(--red);
+     position: relative;
+     width: 100%;
+    /* Ensure header is full width */
+}
+ .header h1{
+     font-size: 4rem;
+     text-transform: uppercase;
+}
+ header nav {
+     position: relative;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: end;
+         -ms-flex-pack: end;
+             justify-content: flex-end;
+     -webkit-box-align: end;
+         -ms-flex-align: end;
+             align-items: flex-end;
+     width: 100%;
+    /* Ensure nav is full width */
+}
+/* Desktop and Tablet Menu */
+ .menu-button {
+     display: inline-block;
+     background-color: var(--dark-red);
+     color: var(--white);
+     border: 1px solid white;
+     border-radius: 3px;
+     padding: 0.4rem;
+     cursor: pointer;
+     font-size: 1rem;
+     font-weight: 440;
+     position: fixed;
+     top: 4rem;
+    /* Experiment with this value */
+     right: 7rem;
+    /* Experiment with this value */
+     z-index: 1000;
+    /* Ensure it's above other elements */
+     margin-bottom: 0;
+}
+ .menu-container:hover .dropdown-menu {
+     display: block;
+}
+ .dropdown-menu {
+     display: none;
+     position: fixed;
+     top: 6rem;
+     right: 3rem;
+     background-color: var(--dark-red);
+     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     border-radius: 0.3125rem;
+     z-index: 1000;
+}
+ .dropdown-menu.show {
+     display: block;
+}
+ .dropdown-menu a {
+     display: block;
+     padding: 1rem 2rem;
+     color: var(--white);
+     text-decoration: none;
+}
+ .dropdown-menu a:hover {
+     background-color: var(--red);
+}
+/* Mobile Burger Menu */
+ .burger-menu {
+     display: none;
+     position: fixed;
+     top: 1rem;
+     right: 1rem;
+     cursor: pointer;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+             flex-direction: column;
+     gap: 0.25rem;
+    /* Adjust gap between bars */
+     background-color: var(--dark-red);
+     border: 1px solid white;
+     border-radius: 3px;
+     padding: 0.3rem;
+}
+ .burger-menu .bar {
+     width: 2rem;
+    /* Adjust width of burger menu bars */
+     height: 0.25rem;
+    /* Adjust height of burger menu bars */
+     background-color: var(--black);
+     -webkit-transition: -webkit-transform 0.3s ease;
+     transition: -webkit-transform 0.3s ease;
+     -o-transition: transform 0.3s ease;
+     transition: transform 0.3s ease;
+     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+/* ------------------------------------------------------ */
+/* ------ paragraph styles and TAPE across horizontal -----*/
+ #section7 .content .text .tape,
+ #section6 .content .text .tape,
+ #section4 .content .text .tape,
+ #section3 .content .text .tape,
+ #section2 .content .text .tape {
+     background-color: var(--dark-red);
+     margin-top: 3rem;
+     margin-bottom: 3rem;
+     margin-left: -1.24rem;
+    /* Negative margin to offset the container's padding */
+     margin-right: -1.24rem;
+    /* Negative margin to offset the container's padding */
+     padding-left: 1.24rem;
+    /* Restore padding inside the element */
+     padding-right: 1.24rem;
+    /* Restore padding inside the element */
+     padding-top: 0.1rem;
+     padding-bottom: 0.1rem;
+     width: calc(100% + 2.48rem);
+    /* Adjust width to cover the full width plus the negative margins */
+}
+
+ p {
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+}
+.boxPaint {
+	background-color: lightgray;
+	padding: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	margin-left: -1.24rem;
+	margin-right: -1.24rem;
+}
+ section .content .text .tall {
+     margin-top: 2rem;
+     margin-bottom: 2rem;
+}
+ section .content .text .tall-up {
+     margin-top: 2rem;
+     margin-bottom: 1rem;
+}
+ section .content .text .tall-down {
+     margin-top: 1rem;
+     margin-bottom: 2rem;
+}
+ section .content .text .tall-up-short-down {
+     margin-top: 2rem;
+     margin-bottom: 0;
+}
+ section .content .text .tall-down-short-up {
+     margin-top: 0;
+     margin-bottom: 2rem;
+}
+ section .content .text .short-down {
+     margin-top: 1rem;
+     margin-bottom: 0;
+}
+ section .content .text .short {
+     margin-top: 0;
+     margin-bottom: 0;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* Overlay Menu for Mobile */
+ .overlay-menu {
+     display: none;
+     position: fixed;
+     top: 0;
+     right: 0;
+     width: 50%;
+     height: 100%;
+     background-color: var(--dark-red);
+     color: var(--white);
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+             flex-direction: column;
+     -webkit-box-pack: start;
+         -ms-flex-pack: start;
+             justify-content: flex-start;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     padding-top: 3rem;
+     -webkit-transition: -webkit-transform 0.3s ease-in-out;
+     transition: -webkit-transform 0.3s ease-in-out;
+     -o-transition: transform 0.3s ease-in-out;
+     transition: transform 0.3s ease-in-out;
+     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+     -webkit-transform: translateX(100%);
+         -ms-transform: translateX(100%);
+             transform: translateX(100%);
+     z-index: 1000;
+}
+ .overlay-menu.show {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-transform: translateX(0);
+         -ms-transform: translateX(0);
+             transform: translateX(0);
+}
+ .overlay-menu a {
+     margin: 1rem 0;
+     text-decoration: none;
+     color: var(--white);
+     padding: 0.5rem 1rem;
+     border-bottom: 1px solid white;
+}
+ .overlay-menu a:last-child {
+     border-bottom: none;
+}
+ .close-button {
+     position: absolute;
+     top: 1rem;
+     left: 1rem;
+     background: none;
+     border: 1px solid white;
+     padding: 0.5rem;
+     border-radius: 0.3125rem;
+     font-size: 1.5rem;
+    /* Adjust font size of close button */
+     color: var(--white);
+     height: 2rem;
+     width: 2rem;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+}
+/* Section styles */
+ section {
+     margin: 3rem 0;
+     padding: 3rem;
+     background-color: var(--almond);
+     border-radius: 0.3rem;
+     width: 100%;
+    /* Ensure sections are full width */
+     color: var(--dark-gray);
+}
+ section a {
+     text-decoration: none;
+     color: var(--dark-red);
+     font-weight: 410;
+}
+ h2 {
+     border-bottom: 1px solid var(--dark-red);
+     padding-bottom: 0.5rem;
+}
+ .divider {
+     height: 1px;
+     background-color: var(--dark-red);
+     margin: 2rem 0;
+    /* Space around dividers */
+}
+/* Adjust CSS to use Flexbox for responsive design */
+ .content {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+}
+ .text {
+     -webkit-box-flex: 1;
+         -ms-flex: 1;
+             flex: 1;
+     min-width: 50%;
+}
+ .inline-image {
+     float: right;
+     margin: 0 0 1.25rem 1.25rem;
+     max-width: 30%;
+    /* Set max width for larger screens */
+     aspect-ratio: 16 / 9;
+}
+/* styles for clickable links to websites as text addresses */
+.linkpages {
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+/* Style for clickable images */
+ .image a {
+     display: block;
+}
+ .image img {
+     max-width: 100%;
+     height: auto;
+     border: 1px solid var(--black);
+     -webkit-transition: opacity 0.3s ease;
+     -o-transition: opacity 0.3s ease;
+     transition: opacity 0.3s ease;
+}
+ .image a:hover img {
+     opacity: 0.8;
+}
+
+/* ------------------------------------------------------ */
+/* ---------- FOOTER ------------- */
+/* Footer Styling */
+footer {
+    background-color: var(--dark-red); /* Black background */
+    color: #fff; /* White text */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Flexbox for vertical centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content horizontally */
+    height: 4rem; /* Base height (scales via media queries) */
+    padding: 1rem; /* Padding for extra space */
+    font-size: 1rem; /* Base text size (scales via media queries) */
+}
+
+
+/* ------------------------------------------------------ */
+/* --------------- Media Queries ------------------------ */
+/* Responsive Design */
+ @media (max-width: 768px) {
+     body {
+         padding: 0;
+         margin: 0;
+    }
+     .container {
+         padding: 0;
+        /* Remove padding in mobile view */
+         max-width: 100%;
+         width: 100%;
+    }
+     ul {
+         margin: 0.75rem 1.5rem;
+    }
+     section {
+         margin: 0;
+        /* Remove margin in mobile view */
+         padding: 1rem;
+         width: 100%;
+        /* Ensure sections are full width in mobile view */
+         border-radius: 0;
+    }
+     header, header nav {
+         width: 100%;
+        /* Ensure header and nav are full width on mobile */
+         padding: 0 1rem;
+         height: 5rem;
+         text-align: center;
+         -webkit-box-pack: center;
+             -ms-flex-pack: center;
+                 justify-content: center;
+    }
+     #section2, #section4, #section6 {
+         background-color: var(--dark-red);
+         color: var(--white);
+    }
+     #section6 .content .text .tape, #section4 .content .text .tape, #section2 .content .text .tape {
+         background-color: var(--peach-yellow);
+    }
+     #section2 .italicSpan, #section4 .italicSpan, #section6 .italicSpan {
+         color: var(--peach-yellow);
+    }
+     #section2 h2, #section4 h2, #section6 h2{
+         border-bottom: 1px solid;
+         color: var(--peach-yellow);
+    }
+     #section2 a, #section4 a, #section6 a{
+         color: var(--peach-yellow);
+         padding: 0.3rem;
+    }
+     #section2 .underlineH4, #section4 .underlineH4, #section6 .underlineH4 {
+         border-bottom: 1px solid var(--peach-yellow);
+         color: var(--peach-yellow);
+    }
+     #section6 a {
+         display: inline-block;
+        /* Ensure each link takes up a full line */
+         margin: 0.0rem 0 1rem 0;
+        /* Set margin to create the gap */
+         line-height: 1;
+    }
+     section a {
+         line-height: 2;
+    }
+     #imgTagA {
+         padding: 0;
+         border: none !important;
+         border-color: none !important;
+    }
+     .burger-menu {
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+        /* Ensure burger menu is visible in mobile view */
+    }
+    /* Hide desktop dropdown menu and button in mobile view */
+     .menu-button, .dropdown-menu {
+         display: none;
+    }
+     .content {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+             -ms-flex-direction: column;
+                 flex-direction: column;
+         -webkit-box-align: start;
+             -ms-flex-align: start;
+                 align-items: flex-start;
+    }
+     .text, .image {
+         width: 100%;
+         padding: 1.25rem 0;
+    }
+     .inline-image {
+         float: none;
+        /* Remove float in mobile view */
+         width: 100%;
+        /* Ensure image takes full width in mobile view */
+         max-width: none;
+        /* Disable max-width */
+         height: auto;
+        /* Maintain aspect ratio */
+         display: block;
+        /* Ensure image behaves as a block element */
+         margin: 1rem auto;
+        /* Center the image */
+    }
+     .text p {
+         word-break: break-word;
+        /* Ensure long text without spaces wraps */
+    }
+}
+ @media (max-width: 600px) {
+     header {
+         padding-top: 1rem;
+    }
+     .header h1{
+         font-size: 2rem;
+    }
+     .inline-image {
+         width: 100%;
+        /* Full width for mobile and small tablets */
+    }
+     .burger-menu .bar {
+         width: 1.5rem;
+        /* Adjust width of burger menu bars for smaller devices */
+         height: 0.2rem;
+        /* Adjust height of burger menu bars for smaller devices */
+    }
+	 footer {
+        height: 6rem; /* Increase height */
+        font-size: 1rem; /* Scale up font size */
+    }
+}
+ @media (min-width: 601px) and (max-width: 768px) {
+     header {
+         padding-top: 1rem;
+    }
+     .header h1{
+         font-size: 2.3rem;
+    }
+     .inline-image {
+         width: 100%;
+        /* Slightly smaller for slightly larger tablets */
+    }
+     .container {
+         padding: 0rem;
+        /* Adjust padding for slightly larger tablets */
+    }
+     .burger-menu .bar {
+         width: 2rem;
+        /* Adjust width of burger menu bars for larger tablets */
+         height: 0.25rem;
+        /* Adjust height of burger menu bars for larger tablets */
+    }
+	
+	 footer {
+        height: 6rem; /* Increase height */
+        font-size: 1.2rem; /* Scale up font size */
+    }
+}
+ @media (min-width: 769px) and (max-width: 1024px) {
+     .header h1{
+         font-size: 3rem;
+    }
+     .inline-image {
+         width: 50%;
+        /* Consistent size for smaller laptops */
+    }
+     .container {
+         padding: 0rem 2.5rem;
+        /* Adjust padding for smaller laptops */
+    }
+	
+	/* Desktop and Tablet Menu */
+	 .menu-button {
+		 
+		 right: 3.5rem;
+		/* Experiment with this value */
+	}
+	 .dropdown-menu {
+		 right: 1rem;
+		 
+	}
+	
+	 footer {
+        height: 6rem; /* Increase height */
+        font-size: 1.3rem; /* Scale up font size */
+    }
+}
+ @media (min-width: 1025px) and (max-width: 1450px) {
+    
+	/* Wide 4k Desktop Menu */
+	 .menu-button {
+		 
+		 right: 7rem;
+		/* Experiment with this value */
+	}
+	 .dropdown-menu {
+		 right: 3rem;
+		 
+	}
+	footer {
+        height: 6rem; /* Increase height */
+        font-size: 1.4rem; /* Scale up font size */
+    }
+}
+ 
+ @media (min-width: 1451px) {
+    
+	/* Wide 4k Desktop Menu */
+	 .menu-button {
+		 
+		 right: 18rem;
+		/* Experiment with this value */
+	}
+	 .dropdown-menu {
+		 right: 14rem;
+		 
+	}
+	footer {
+        height: 6rem; /* Increase height */
+        font-size: 1.4rem; /* Scale up font size */
+    }
+}
+
+
+
